@@ -15,6 +15,7 @@
 		D9B6ED2F227379990021676A /* AsyncDataDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6ED2E227379990021676A /* AsyncDataDownloaderTests.swift */; };
 		D9B6ED3A227379990021676A /* AsyncDataDownloaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6ED39227379990021676A /* AsyncDataDownloaderUITests.swift */; };
 		D9B6ED4922737F510021676A /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6ED4822737F510021676A /* Downloader.swift */; };
+		D9B6ED4D227397470021676A /* DownloaderTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6ED4C227397470021676A /* DownloaderTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D9B6ED39227379990021676A /* AsyncDataDownloaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncDataDownloaderUITests.swift; sourceTree = "<group>"; };
 		D9B6ED3B227379990021676A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9B6ED4822737F510021676A /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+		D9B6ED4C227397470021676A /* DownloaderTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			children = (
 				D9B6ED2E227379990021676A /* AsyncDataDownloaderTests.swift */,
 				D9B6ED30227379990021676A /* Info.plist */,
+				D9B6ED4C227397470021676A /* DownloaderTestCase.swift */,
 			);
 			path = AsyncDataDownloaderTests;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B6ED4D227397470021676A /* DownloaderTestCase.swift in Sources */,
 				D9B6ED2F227379990021676A /* AsyncDataDownloaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

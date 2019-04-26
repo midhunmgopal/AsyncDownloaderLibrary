@@ -9,5 +9,36 @@
 import UIKit
 
 class Downloader: NSObject {
+    fileprivate let session = URLSession(configuration: .default)
+    fileprivate var dataTask = URLSessionDataTask()
     
+    /**
+     The completion handler for the api call.
+     - Parameter data: The downloaded data will be available here, Data?
+     - Parameter error: The error object, Error?
+     */
+    typealias CompletionHandler = (_ data: Data?, _ error: Error?) -> Void
+    
+    
+    /**
+     Download data from the url. And the the response is available through the closure.
+     - Parameter urlString: The url of the data to download. Type String.
+     - Parameter completion: The completion handler.
+     */
+    func downloadWith(urlString: String, completion: @escaping CompletionHandler) {
+        guard let url = URL(string: urlString) else {
+            completion(nil, nil)
+            return
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+        
+        dataTask = session.dataTask(
+            with: urlRequest,
+            completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
+                completion(data, error)
+        })
+        dataTask.resume()
+    }
 }
