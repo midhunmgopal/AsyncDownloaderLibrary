@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D9B6ED1A227379960021676A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6ED19227379960021676A /* AppDelegate.swift */; };
+		D9B6ED1C227379960021676A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6ED1B227379960021676A /* ViewController.swift */; };
+		D9B6ED1F227379960021676A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B6ED1D227379960021676A /* Main.storyboard */; };
+		D9B6ED21227379990021676A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B6ED20227379990021676A /* Assets.xcassets */; };
+		D9B6ED24227379990021676A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B6ED22227379990021676A /* LaunchScreen.storyboard */; };
+		D9B6ED2F227379990021676A /* AsyncDataDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6ED2E227379990021676A /* AsyncDataDownloaderTests.swift */; };
+		D9B6ED3A227379990021676A /* AsyncDataDownloaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6ED39227379990021676A /* AsyncDataDownloaderUITests.swift */; };
+		D9B6ED4922737F510021676A /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6ED4822737F510021676A /* Downloader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9B6ED2B227379990021676A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9B6ED0E227379960021676A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9B6ED15227379960021676A;
+			remoteInfo = AsyncDataDownloader;
+		};
+		D9B6ED36227379990021676A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9B6ED0E227379960021676A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9B6ED15227379960021676A;
+			remoteInfo = AsyncDataDownloader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D9B6ED16227379960021676A /* AsyncDataDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsyncDataDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B6ED19227379960021676A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D9B6ED1B227379960021676A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D9B6ED1E227379960021676A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D9B6ED20227379990021676A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9B6ED23227379990021676A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D9B6ED25227379990021676A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B6ED2A227379990021676A /* AsyncDataDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsyncDataDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B6ED2E227379990021676A /* AsyncDataDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncDataDownloaderTests.swift; sourceTree = "<group>"; };
+		D9B6ED30227379990021676A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B6ED35227379990021676A /* AsyncDataDownloaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsyncDataDownloaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B6ED39227379990021676A /* AsyncDataDownloaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncDataDownloaderUITests.swift; sourceTree = "<group>"; };
+		D9B6ED3B227379990021676A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B6ED4822737F510021676A /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9B6ED13227379960021676A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B6ED27227379990021676A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B6ED32227379990021676A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D9B6ED0D227379960021676A = {
+			isa = PBXGroup;
+			children = (
+				D9B6ED18227379960021676A /* AsyncDataDownloader */,
+				D9B6ED2D227379990021676A /* AsyncDataDownloaderTests */,
+				D9B6ED38227379990021676A /* AsyncDataDownloaderUITests */,
+				D9B6ED17227379960021676A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D9B6ED17227379960021676A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9B6ED16227379960021676A /* AsyncDataDownloader.app */,
+				D9B6ED2A227379990021676A /* AsyncDataDownloaderTests.xctest */,
+				D9B6ED35227379990021676A /* AsyncDataDownloaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9B6ED18227379960021676A /* AsyncDataDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				D9B6ED4722737F1E0021676A /* Library */,
+				D9B6ED19227379960021676A /* AppDelegate.swift */,
+				D9B6ED1B227379960021676A /* ViewController.swift */,
+				D9B6ED1D227379960021676A /* Main.storyboard */,
+				D9B6ED20227379990021676A /* Assets.xcassets */,
+				D9B6ED22227379990021676A /* LaunchScreen.storyboard */,
+				D9B6ED25227379990021676A /* Info.plist */,
+			);
+			path = AsyncDataDownloader;
+			sourceTree = "<group>";
+		};
+		D9B6ED2D227379990021676A /* AsyncDataDownloaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				D9B6ED2E227379990021676A /* AsyncDataDownloaderTests.swift */,
+				D9B6ED30227379990021676A /* Info.plist */,
+			);
+			path = AsyncDataDownloaderTests;
+			sourceTree = "<group>";
+		};
+		D9B6ED38227379990021676A /* AsyncDataDownloaderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D9B6ED39227379990021676A /* AsyncDataDownloaderUITests.swift */,
+				D9B6ED3B227379990021676A /* Info.plist */,
+			);
+			path = AsyncDataDownloaderUITests;
+			sourceTree = "<group>";
+		};
+		D9B6ED4722737F1E0021676A /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				D9B6ED4822737F510021676A /* Downloader.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D9B6ED15227379960021676A /* AsyncDataDownloader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9B6ED3E227379990021676A /* Build configuration list for PBXNativeTarget "AsyncDataDownloader" */;
+			buildPhases = (
+				D9B6ED12227379960021676A /* Sources */,
+				D9B6ED13227379960021676A /* Frameworks */,
+				D9B6ED14227379960021676A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AsyncDataDownloader;
+			productName = AsyncDataDownloader;
+			productReference = D9B6ED16227379960021676A /* AsyncDataDownloader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D9B6ED29227379990021676A /* AsyncDataDownloaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9B6ED41227379990021676A /* Build configuration list for PBXNativeTarget "AsyncDataDownloaderTests" */;
+			buildPhases = (
+				D9B6ED26227379990021676A /* Sources */,
+				D9B6ED27227379990021676A /* Frameworks */,
+				D9B6ED28227379990021676A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9B6ED2C227379990021676A /* PBXTargetDependency */,
+			);
+			name = AsyncDataDownloaderTests;
+			productName = AsyncDataDownloaderTests;
+			productReference = D9B6ED2A227379990021676A /* AsyncDataDownloaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D9B6ED34227379990021676A /* AsyncDataDownloaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9B6ED44227379990021676A /* Build configuration list for PBXNativeTarget "AsyncDataDownloaderUITests" */;
+			buildPhases = (
+				D9B6ED31227379990021676A /* Sources */,
+				D9B6ED32227379990021676A /* Frameworks */,
+				D9B6ED33227379990021676A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9B6ED37227379990021676A /* PBXTargetDependency */,
+			);
+			name = AsyncDataDownloaderUITests;
+			productName = AsyncDataDownloaderUITests;
+			productReference = D9B6ED35227379990021676A /* AsyncDataDownloaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9B6ED0E227379960021676A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Midhun;
+				TargetAttributes = {
+					D9B6ED15227379960021676A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					D9B6ED29227379990021676A = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D9B6ED15227379960021676A;
+					};
+					D9B6ED34227379990021676A = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D9B6ED15227379960021676A;
+					};
+				};
+			};
+			buildConfigurationList = D9B6ED11227379960021676A /* Build configuration list for PBXProject "AsyncDataDownloader" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D9B6ED0D227379960021676A;
+			productRefGroup = D9B6ED17227379960021676A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9B6ED15227379960021676A /* AsyncDataDownloader */,
+				D9B6ED29227379990021676A /* AsyncDataDownloaderTests */,
+				D9B6ED34227379990021676A /* AsyncDataDownloaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9B6ED14227379960021676A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B6ED24227379990021676A /* LaunchScreen.storyboard in Resources */,
+				D9B6ED21227379990021676A /* Assets.xcassets in Resources */,
+				D9B6ED1F227379960021676A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B6ED28227379990021676A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B6ED33227379990021676A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9B6ED12227379960021676A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B6ED1C227379960021676A /* ViewController.swift in Sources */,
+				D9B6ED1A227379960021676A /* AppDelegate.swift in Sources */,
+				D9B6ED4922737F510021676A /* Downloader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B6ED26227379990021676A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B6ED2F227379990021676A /* AsyncDataDownloaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B6ED31227379990021676A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B6ED3A227379990021676A /* AsyncDataDownloaderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9B6ED2C227379990021676A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9B6ED15227379960021676A /* AsyncDataDownloader */;
+			targetProxy = D9B6ED2B227379990021676A /* PBXContainerItemProxy */;
+		};
+		D9B6ED37227379990021676A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9B6ED15227379960021676A /* AsyncDataDownloader */;
+			targetProxy = D9B6ED36227379990021676A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D9B6ED1D227379960021676A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9B6ED1E227379960021676A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D9B6ED22227379990021676A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9B6ED23227379990021676A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D9B6ED3C227379990021676A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D9B6ED3D227379990021676A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D9B6ED3F227379990021676A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AsyncDataDownloader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmg.AsyncDataDownloader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D9B6ED40227379990021676A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AsyncDataDownloader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmg.AsyncDataDownloader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D9B6ED42227379990021676A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AsyncDataDownloaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmg.AsyncDataDownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AsyncDataDownloader.app/AsyncDataDownloader";
+			};
+			name = Debug;
+		};
+		D9B6ED43227379990021676A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AsyncDataDownloaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmg.AsyncDataDownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AsyncDataDownloader.app/AsyncDataDownloader";
+			};
+			name = Release;
+		};
+		D9B6ED45227379990021676A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AsyncDataDownloaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmg.AsyncDataDownloaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AsyncDataDownloader;
+			};
+			name = Debug;
+		};
+		D9B6ED46227379990021676A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AsyncDataDownloaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmg.AsyncDataDownloaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AsyncDataDownloader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9B6ED11227379960021676A /* Build configuration list for PBXProject "AsyncDataDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B6ED3C227379990021676A /* Debug */,
+				D9B6ED3D227379990021676A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9B6ED3E227379990021676A /* Build configuration list for PBXNativeTarget "AsyncDataDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B6ED3F227379990021676A /* Debug */,
+				D9B6ED40227379990021676A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9B6ED41227379990021676A /* Build configuration list for PBXNativeTarget "AsyncDataDownloaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B6ED42227379990021676A /* Debug */,
+				D9B6ED43227379990021676A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9B6ED44227379990021676A /* Build configuration list for PBXNativeTarget "AsyncDataDownloaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B6ED45227379990021676A /* Debug */,
+				D9B6ED46227379990021676A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D9B6ED0E227379960021676A /* Project object */;
+}
