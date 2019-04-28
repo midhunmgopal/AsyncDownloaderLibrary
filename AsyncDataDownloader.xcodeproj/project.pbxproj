@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D97D27E122758DC30025EE23 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97D27E022758DC30025EE23 /* APIManager.swift */; };
+		D97D27E522758E500025EE23 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97D27E422758E500025EE23 /* ImageCollectionViewCell.swift */; };
 		D9B6ED1A227379960021676A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6ED19227379960021676A /* AppDelegate.swift */; };
 		D9B6ED1C227379960021676A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6ED1B227379960021676A /* ViewController.swift */; };
 		D9B6ED1F227379960021676A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B6ED1D227379960021676A /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D97D27E022758DC30025EE23 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		D97D27E422758E500025EE23 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		D9B6ED16227379960021676A /* AsyncDataDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsyncDataDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B6ED19227379960021676A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9B6ED1B227379960021676A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D97D27DF22758DA60025EE23 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				D97D27E022758DC30025EE23 /* APIManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		D97D27E222758E0E0025EE23 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D97D27E622758F9F0025EE23 /* Models */,
+				D97D27E322758E1B0025EE23 /* Cell */,
+				D9B6ED1B227379960021676A /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D97D27E322758E1B0025EE23 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D97D27E422758E500025EE23 /* ImageCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D97D27E622758F9F0025EE23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D9B6ED0D227379960021676A = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +138,10 @@
 		D9B6ED18227379960021676A /* AsyncDataDownloader */ = {
 			isa = PBXGroup;
 			children = (
+				D97D27DF22758DA60025EE23 /* APIManager */,
 				D9B6ED4722737F1E0021676A /* Library */,
 				D9B6ED19227379960021676A /* AppDelegate.swift */,
-				D9B6ED1B227379960021676A /* ViewController.swift */,
+				D97D27E222758E0E0025EE23 /* Controllers */,
 				D9B6ED1D227379960021676A /* Main.storyboard */,
 				D9B6ED20227379990021676A /* Assets.xcassets */,
 				D9B6ED22227379990021676A /* LaunchScreen.storyboard */,
@@ -270,6 +308,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D97D27E122758DC30025EE23 /* APIManager.swift in Sources */,
+				D97D27E522758E500025EE23 /* ImageCollectionViewCell.swift in Sources */,
 				D9B6ED1C227379960021676A /* ViewController.swift in Sources */,
 				D9B6ED1A227379960021676A /* AppDelegate.swift in Sources */,
 				D9B6ED4922737F510021676A /* Downloader.swift in Sources */,
@@ -450,6 +490,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AsyncDataDownloader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,6 +508,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AsyncDataDownloader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
