@@ -12,11 +12,10 @@ import XCTest
 class DownloaderTestCase: XCTestCase {
 
     var downloader: Downloader?
-    var url = String()
+    let url = "https://i.etsystatic.com/15364217/r/il/0401af/1565696411/il_794xN.1565696411_n9jf.jpg"
     
     override func setUp() {
         downloader = Downloader()
-        url = "https://i.etsystatic.com/15364217/r/il/0401af/1565696411/il_794xN.1565696411_n9jf.jpg"
     }
 
     override func tearDown() {
