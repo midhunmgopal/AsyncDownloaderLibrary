@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D97D27EA227597BB0025EE23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97D27E9227597BB0025EE23 /* ViewController.swift */; };
+		D97D27ED227599A80025EE23 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97D27EC227599A80025EE23 /* ImageCollectionViewCell.swift */; };
 		D9B6ED1A227379960021676A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6ED19227379960021676A /* AppDelegate.swift */; };
-		D9B6ED1C227379960021676A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6ED1B227379960021676A /* ViewController.swift */; };
 		D9B6ED1F227379960021676A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B6ED1D227379960021676A /* Main.storyboard */; };
 		D9B6ED21227379990021676A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B6ED20227379990021676A /* Assets.xcassets */; };
 		D9B6ED24227379990021676A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B6ED22227379990021676A /* LaunchScreen.storyboard */; };
@@ -36,9 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D97D27E9227597BB0025EE23 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D97D27EC227599A80025EE23 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		D9B6ED16227379960021676A /* AsyncDataDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsyncDataDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B6ED19227379960021676A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D9B6ED1B227379960021676A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D9B6ED1E227379960021676A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9B6ED20227379990021676A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9B6ED23227379990021676A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +80,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D97D27E8227597BB0025EE23 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D97D27EB227599660025EE23 /* Cell */,
+				D97D27E9227597BB0025EE23 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D97D27EB227599660025EE23 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D97D27EC227599A80025EE23 /* ImageCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		D9B6ED0D227379960021676A = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +122,7 @@
 			children = (
 				D9B6ED4722737F1E0021676A /* Library */,
 				D9B6ED19227379960021676A /* AppDelegate.swift */,
-				D9B6ED1B227379960021676A /* ViewController.swift */,
+				D97D27E8227597BB0025EE23 /* Controllers */,
 				D9B6ED1D227379960021676A /* Main.storyboard */,
 				D9B6ED20227379990021676A /* Assets.xcassets */,
 				D9B6ED22227379990021676A /* LaunchScreen.storyboard */,
@@ -270,8 +289,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9B6ED1C227379960021676A /* ViewController.swift in Sources */,
+				D97D27EA227597BB0025EE23 /* ViewController.swift in Sources */,
 				D9B6ED1A227379960021676A /* AppDelegate.swift in Sources */,
+				D97D27ED227599A80025EE23 /* ImageCollectionViewCell.swift in Sources */,
 				D9B6ED4922737F510021676A /* Downloader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
