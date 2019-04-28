@@ -12,13 +12,6 @@ class Downloader: NSObject {
     fileprivate let session = URLSession(configuration: .default)
     fileprivate var dataTask = URLSessionDataTask()
     
-    /**
-     The completion handler for the api call.
-     - Parameter data: The downloaded data will be available here, Data?
-     - Parameter error: The error object, Error?
-     */
-    typealias CompletionHandler = (_ data: Data?, _ error: Error?) -> Void
-    
     
     /**
      Download data from the url. And the the response is available through the closure.
