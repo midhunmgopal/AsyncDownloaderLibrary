@@ -34,7 +34,7 @@ class ImageCache {
     private var cache: [String: CacheData]
     
     /// Image maximum hold interval
-    private let kMaximumHoldInterval: TimeInterval = 5 * 60
+    private let kMaximumHoldInterval: TimeInterval = 60
     
     /// Configurable maximum cache hold count.
     var maxCacheHoldCount: Int

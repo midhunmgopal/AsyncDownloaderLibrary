@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     fileprivate var shouldLoadNextPage: Bool = true
     fileprivate var refreshControl = UIRefreshControl()
     fileprivate var isRefreshing: Bool = false
+    fileprivate var isRequesting: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +63,9 @@ class ViewController: UIViewController {
                 return
             }
             let dataModel = result.map({ DataModel(data: $0) })
+            
+            // restrict loading next page if result is emtpy.
+            self.shouldLoadNextPage = self.shouldLoadNextPage ? !dataModel.isEmpty : self.shouldLoadNextPage
             if self.isRefreshing {
                 self.isRefreshing = false
                 self.dataSource = dataModel
@@ -82,6 +86,12 @@ class ViewController: UIViewController {
         isRefreshing = true
         loadData()
     }
+    
+    /// Load next page.
+    private func loadNextPage() {
+        page += 1
+        loadData()
+    }
 
 }
 
@@ -99,6 +109,12 @@ extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSource.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row >= dataSource.count - 1 && shouldLoadNextPage && !isRequesting {
+            loadNextPage()
+        }
     }
 }
 
