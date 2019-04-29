@@ -12,10 +12,11 @@ class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var imageViewItem: UIImageView!
     
-    private var downloader: Downloader? = Downloader()
+    private var downloader: Downloader?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        downloader = Downloader()
         makeBorderView()
     }
     
@@ -26,23 +27,38 @@ class ImageCollectionViewCell: UICollectionViewCell {
     }
     
     func updateData(model: DataModel) {
-        print("requeting: \(model.images.small)")
-        self.showIndicator()
-        downloader?.downloadWith(urlString: model.images.small, completion: { [weak self] (data, error) in
-            self?.hideIndicator()
-            guard let self = self else { return }
-            guard let imgData = data,
-                error == nil else {
-                    DispatchQueue.main.async {
-                        self.imageViewItem.image = nil
-                    }
-                    return
-            }
-            
-            let image = UIImage(data: imgData)
-            DispatchQueue.main.async {
-                self.imageViewItem.image = image
-            }
+        imageViewItem.contentMode = .center
+        downloadImage(url: model.images.small, placeHolder: UIImage(named: "placeholder"))
+    }
+}
+
+extension ImageCollectionViewCell {
+    /**
+     Download the image with the given url and optional placeholder image.
+     - Parameter url: The image url to download, String.
+     - Parameter placeholder: The placeholder image, UIImage.
+     */
+    func downloadImage(url: String,
+                       placeHolder: UIImage? = nil) {
+        imageViewItem.image = placeHolder
+        downloader?.downloadImage(url: url, completion: { (image: UIImage?) in
+            self.showImageWithAnimation(image: image)
         })
+    }
+    
+    /**
+     Show image with animation
+     - Parameter image: The optional image to set the imageview.
+     */
+    private func showImageWithAnimation(image: UIImage?) {
+        UIView.animate(withDuration: TimeInterval(0.5),
+                       delay: 0,
+                       options: .transitionFlipFromTop,
+                       animations: {
+                        DispatchQueue.main.async {
+                            self.imageViewItem.image = image
+                        }
+        },
+                       completion: nil)
     }
 }

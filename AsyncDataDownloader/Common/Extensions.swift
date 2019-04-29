@@ -41,12 +41,12 @@ extension UIViewController {
      Hide loading indicator
      */
     func hideLoading() {
-        guard let window = (UIApplication.shared.delegate as? AppDelegate)?.window,
-            let rootController = window.rootViewController else {
-                return
-        }
-        
         DispatchQueue.main.async {
+            guard let window = (UIApplication.shared.delegate as? AppDelegate)?.window,
+                let rootController = window.rootViewController else {
+                    return
+            }
+            
             for view in rootController.view.subviews {
                 if view.isKind(of: ActivityIndicatorView.self) {
                     (view as? ActivityIndicatorView)?.activityIndicator?.stopAnimating()

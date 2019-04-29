@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     // Pagination
     fileprivate var page: Int = 0
     fileprivate var shouldLoadNextPage: Bool = true
+    fileprivate var refreshControl = UIRefreshControl()
+    fileprivate var isRefreshing: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,8 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 20, right: 10)
+        collectionView.refreshControl = refreshControl
+        collectionView.refreshControl?.addTarget(self, action: #selector(refreshImageData(_:)), for: .valueChanged)
     }
 
     
@@ -38,25 +42,45 @@ class ViewController: UIViewController {
         showLoading()
         let apimanager = APIManager()
         apimanager.requestWith(urlString: kDataURL) { [weak self] (response) in
-            self?.hideLoading()
             guard let self = self else { return }
+            
+            self.hideLoading()
+            DispatchQueue.main.async {
+                self.refreshControl.endRefreshing()
+            }
             
             //Error check
             guard response.error == nil else {
                 print("Error: \(response.error?.localizedDescription ?? "")")
+                self.isRefreshing = false
                 return
             }
             
             // Result data
             guard let result = response.data as? [[String: Any]] else {
+                self.isRefreshing = false
                 return
             }
             let dataModel = result.map({ DataModel(data: $0) })
-            self.dataSource.append(contentsOf: dataModel)
+            if self.isRefreshing {
+                self.isRefreshing = false
+                self.dataSource = dataModel
+            }
+            else {
+                self.dataSource.append(contentsOf: dataModel)
+            }
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
         }
+    }
+    
+    /// Refresh the page.
+    @objc private func refreshImageData(_ sender: Any) {
+        page = 0
+        shouldLoadNextPage = true
+        isRefreshing = true
+        loadData()
     }
 
 }
