@@ -24,12 +24,25 @@ class Downloader: NSObject {
             return
         }
         
+        // Get from the cache.
+        if let cacheData = DataCache.shared.itemWith(url: urlString){
+            DispatchQueue.main.async {
+                completion(cacheData, nil)
+            }
+            return
+        }
+        
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = HTTPMethod.get.rawValue
         
         dataTask = session.dataTask(
             with: urlRequest,
             completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
+                
+                // Adding to the cache.
+                if error == nil && data != nil {
+                    DataCache.shared.add(data: data!, url: urlString)
+                }
                 completion(data, error)
         })
         dataTask?.resume()
@@ -46,18 +59,10 @@ class Downloader: NSObject {
     /**
      Download the image with the given url and optional placeholder image.
      - Parameter url: The image url to download, String.
-     - Parameter placeholder: The placeholder image, UIImage.
+     - Parameter completion: The completion closure to update the image.
      */
     func downloadImage(url: String,
                        completion: ((_ image: UIImage?) -> Void)? = nil) {
-        
-        if let cacheImage = ImageCache.shared.imageWith(url: url) {
-            DispatchQueue.main.async {
-                completion?(cacheImage)
-            }
-            return
-        }
-        
         cancel()
         // Download the image and store to the cache
         downloadWith(urlString: url) { (data, error) in
@@ -75,8 +80,6 @@ class Downloader: NSObject {
                 }
                 return
             }
-            
-            ImageCache.shared.add(image: _data, url: url)
             DispatchQueue.main.async {
                 completion?(UIImage(data: _data))
             }

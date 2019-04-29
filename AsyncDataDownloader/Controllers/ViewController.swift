@@ -97,6 +97,15 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        UIView.animate(withDuration: 0.5) {
+            cell?.transform = CGAffineTransform.identity
+        }
+        
+        let previewController = PreviewViewController.previewController
+        previewController.data = dataSource[indexPath.row]
+        self.navigationController?.present(previewController, animated: true, completion: nil)
     }
 }
 

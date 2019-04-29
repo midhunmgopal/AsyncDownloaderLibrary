@@ -1,5 +1,5 @@
 //
-//  ImageCache.swift
+//  DataCache.swift
 //  AsyncDataDownloader
 //
 //  Created by Midhun on 29/04/19.
@@ -11,7 +11,7 @@ import UIKit
 
 
 /// Model struct for cache.
-struct CacheData {
+struct CacheDataModel {
     var data: Data
     var timestamp: Int
     var hitCount: Int
@@ -25,13 +25,13 @@ struct CacheData {
 
 
 /// Class reponsible for cache handling.
-class ImageCache {
-    private static let _shared = ImageCache()
-    class var shared: ImageCache {
+class DataCache {
+    private static let _shared = DataCache()
+    class var shared: DataCache {
         return _shared
     }
     
-    private var cache: [String: CacheData]
+    private var cache: [String: CacheDataModel]
     
     /// Image maximum hold interval
     private let kMaximumHoldInterval: TimeInterval = 60
@@ -54,43 +54,40 @@ class ImageCache {
     /**
      Get the item from the cache with key.
      - Parameter url: The unique url, String.
-     - Returns: If data found for the unique key, then CacheData else nil.
+     - Returns: If data found for the unique key, then CacheDataModel else nil.
      */
-    private func cacheDataWith(url: String) -> CacheData? {
+    private func cacheDataWith(url: String) -> CacheDataModel? {
         cache[url]?.timestamp = Int(Date().timeIntervalSince1970)
         return cache[url]
     }
     
     
     /**
-     Return the image data for the given url.
+     Return the data for the given url.
      - Parameter url: The unique url, String.
-     - Returns: If data found for key, then UIImage else nil.
+     - Returns: If data found for key, then Data else nil.
      */
-    func imageWith(url: String) -> UIImage? {
+    func itemWith(url: String) -> Data? {
         cache[url]?.timestamp = Int(Date().timeIntervalSince1970)
-        guard let data = cache[url]?.data else {
-            return nil
-        }
-        return UIImage(data: data)
+        return cache[url]?.data
     }
     
     /**
      Add item to the cache with url.
-     - Parameter image: The image to be cached, Data.
+     - Parameter data: The data to be cached, Data.
      - Parameter url: The unique image url, String.
      */
-    func add(image: Data, url: String) {
+    func add(data: Data, url: String) {
         let timestamp = Int(Date().timeIntervalSince1970)
         
         var cacheData = cacheDataWith(url: url)
         if cacheData != nil {
-            cacheData?.data = image
+            cacheData?.data = data
             cacheData?.hitCount += 1
             cacheData?.timestamp = timestamp
         }
         else {
-            cacheData = CacheData(data: image, timestamp: timestamp)
+            cacheData = CacheDataModel(data: data, timestamp: timestamp)
         }
         
         // remove from the cache based on time.
@@ -110,7 +107,7 @@ class ImageCache {
      - Parameter interval: The maximum time interval.
      */
     func checkAndRemoveCache(interval: TimeInterval) {
-        cache = cache.filter({ (arg: (key: String, value: CacheData)) -> Bool in
+        cache = cache.filter({ (arg: (key: String, value: CacheDataModel)) -> Bool in
             let (_, value) = arg
             let currentTime = Date()
             let itemDate = Date(timeIntervalSince1970: TimeInterval(value.timestamp))
